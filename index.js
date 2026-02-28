@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+}
 const { Client, GatewayIntentBits } = require('discord.js');
 const { GoogleGenAI } = require('@google/genai'); 
 const express = require('express'); // 🌟 โหลดระบบหน้าม้า
